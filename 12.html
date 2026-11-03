@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>多樂三甲 4b3k0162王仲頤</title>
+    <title>多樂三甲 4b3k0162 王仲頤</title>
 
     <style>
         * {
@@ -107,7 +108,7 @@
 
         .section-title h2 {
             font-size: 34px;
-            color: #ffd84d;
+            color: #173f43;
             margin-bottom: 10px;
         }
 
@@ -116,10 +117,10 @@
             font-size: 15px;
         }
 
-        /* 作品卡片排列 */
+        /* 作品卡片 */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 35px;
         }
 
@@ -139,6 +140,10 @@
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
         }
 
+        .card-image {
+            overflow: hidden;
+        }
+
         .card img {
             width: 100%;
             height: 320px;
@@ -151,17 +156,13 @@
             transform: scale(1.04);
         }
 
-        .card-image {
-            overflow: hidden;
-        }
-
         .card-body {
             padding: 25px;
         }
 
         .card-body h3 {
             font-size: 24px;
-            color: #ffd84d;
+            color: #173f43;
             margin-bottom: 10px;
         }
 
@@ -178,7 +179,7 @@
             font-weight: bold;
         }
 
-        /* 頁尾歡迎區 */
+        /* 感謝區 */
         .thanks {
             background-color: #d9a86c;
             color: #173f43;
@@ -204,7 +205,7 @@
             font-size: 13px;
         }
 
-        /* 手機版排版 */
+        /* 手機版 */
         @media (max-width: 768px) {
             nav {
                 padding: 15px 5%;
@@ -275,7 +276,7 @@
 
         <div class="section-title">
             <h2>我的課堂作品</h2>
-            <p>CLASS PROJECTS & CREATIVE WORKS</p>
+            <p>CLASS PROJECTS &amp; CREATIVE WORKS</p>
         </div>
 
         <div class="gallery">
@@ -287,7 +288,7 @@
                rel="noopener noreferrer">
 
                 <div class="card-image">
-                    <img src="images/1.png" alt="人像攝影">
+                    <img src="1.png" alt="人像攝影">
                 </div>
 
                 <div class="card-body">
@@ -304,7 +305,7 @@
                rel="noopener noreferrer">
 
                 <div class="card-image">
-                    <img src="images/2.JPG" alt="孔廟外拍">
+                    <img src="2.JPG" alt="孔廟外拍">
                 </div>
 
                 <div class="card-body">
@@ -321,7 +322,7 @@
                rel="noopener noreferrer">
 
                 <div class="card-image">
-                    <img src="images/3.JPG" alt="靜物攝影">
+                    <img src="3.JPG" alt="靜物攝影">
                 </div>
 
                 <div class="card-body">
@@ -338,7 +339,7 @@
                rel="noopener noreferrer">
 
                 <div class="card-image">
-                    <img src="images/4.JPG" alt="劍獅">
+                    <img src="4.JPG" alt="劍獅">
                 </div>
 
                 <div class="card-body">
