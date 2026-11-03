@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多樂三甲 4b3k0162王仲頤</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+            background-color: #f3f1eb;
+            color: #173f43;
+            line-height: 1.8;
+        }
+
+        /* 導覽列 */
+        nav {
+            background-color: #173f43;
+            color: #f3f1eb;
+            padding: 16px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #f3f1eb;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d9a86c;
+        }
+
+        /* 首頁封面 */
+        .hero {
+            min-height: 520px;
+            background-color: #173f43;
+            color: #f3f1eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero .subtitle {
+            color: #d9a86c;
+            letter-spacing: 5px;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 16px;
+            color: #e0e0d8;
+        }
+
+        .hero-line {
+            width: 60px;
+            height: 3px;
+            background-color: #d9a86c;
+            margin: 30px auto;
+        }
+
+        /* 作品展示區 */
+        .portfolio {
+            padding: 80px 8%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #ffd84d;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+            font-size: 15px;
+        }
+
+        /* 作品卡片排列 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .card {
+            display: block;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .card:hover img {
+            transform: scale(1.04);
+        }
+
+        .card-image {
+            overflow: hidden;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-body h3 {
+            font-size: 24px;
+            color: #ffd84d;
+            margin-bottom: 10px;
+        }
+
+        .card-body p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #173f43;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* 頁尾歡迎區 */
+        .thanks {
+            background-color: #d9a86c;
+            color: #173f43;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .thanks h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .thanks p {
+            font-size: 15px;
+        }
+
+        /* 頁尾 */
+        footer {
+            background-color: #173f43;
+            color: #f3f1eb;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        /* 手機版排版 */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 5%;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            .hero {
+                min-height: 450px;
+            }
+
+            .portfolio {
+                padding: 55px 6%;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .card img {
+                height: 260px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <div class="logo">MY PORTFOLIO</div>
+
+        <div>
+            <a href="#works">作品展示</a>
+            <a href="#contact">聯絡</a>
+        </div>
+    </nav>
+
+    <!-- 首頁封面 -->
+    <header class="hero">
+        <div class="subtitle">PERSONAL PORTFOLIO · 2026</div>
+
+        <h1>
+            多樂三甲<br>
+            4b3k0162 王仲頤
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+            歡迎來到我的個人作品集。
+            這裡整理了課堂作業、創作練習與學習成果，
+            邀請你一起看看我的想法如何慢慢成形。
+        </p>
+    </header>
+
+    <!-- 作品展示 -->
+    <main class="portfolio" id="works">
+
+        <div class="section-title">
+            <h2>我的課堂作品</h2>
+            <p>CLASS PROJECTS & CREATIVE WORKS</p>
+        </div>
+
+        <div class="gallery">
+
+            <!-- 作品一：人像攝影 -->
+            <a class="card"
+               href="https://photos.app.goo.gl/wvtBLWaYzw3iNuet5"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="card-image">
+                    <img src="images/1.png" alt="人像攝影">
+                </div>
+
+                <div class="card-body">
+                    <h3>人像攝影</h3>
+                    <p>透過鏡頭捕捉人物的神情與姿態，呈現不同的人物特色。</p>
+                    <span class="card-link">點擊查看完整作品 ↗</span>
+                </div>
+            </a>
+
+            <!-- 作品二：孔廟外拍 -->
+            <a class="card"
+               href="https://photos.app.goo.gl/jiQw9mxMTciUvtMS9"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="card-image">
+                    <img src="images/2.JPG" alt="孔廟外拍">
+                </div>
+
+                <div class="card-body">
+                    <h3>孔廟外拍</h3>
+                    <p>以台南孔廟為拍攝場景，記錄建築特色與周遭環境。</p>
+                    <span class="card-link">點擊查看完整作品 ↗</span>
+                </div>
+            </a>
+
+            <!-- 作品三：靜物攝影 -->
+            <a class="card"
+               href="https://photos.app.goo.gl/FYb2wyLqZ1xruD6g6"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="card-image">
+                    <img src="images/3.JPG" alt="靜物攝影">
+                </div>
+
+                <div class="card-body">
+                    <h3>靜物攝影</h3>
+                    <p>透過光線、構圖與物品擺設，展現靜物的細節與美感。</p>
+                    <span class="card-link">點擊查看完整作品 ↗</span>
+                </div>
+            </a>
+
+            <!-- 作品四：劍獅 -->
+            <a class="card"
+               href="https://photos.app.goo.gl/qPPJL5D5vJqDnwZz8"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <div class="card-image">
+                    <img src="images/4.JPG" alt="劍獅">
+                </div>
+
+                <div class="card-body">
+                    <h3>劍獅</h3>
+                    <p>探索台南在地文化與傳統藝術，記錄具有特色的劍獅意象。</p>
+                    <span class="card-link">點擊查看完整作品 ↗</span>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- 感謝區 -->
+    <section class="thanks" id="contact">
+        <h2>感謝你的瀏覽！</h2>
+        <p>謝謝你花時間欣賞我的作品，希望這些創作能帶給你一些不同的感受。</p>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        © 2026 個人作品集
+    </footer>
+
+</body>
+</html>
